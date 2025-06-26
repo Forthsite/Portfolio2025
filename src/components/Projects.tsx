@@ -1,14 +1,18 @@
-import { FaCaretDown } from "react-icons/fa";
+import type { Translation } from "../data/translations";
+import Year from "./Year";
+interface ProjectsProps {
+  translation: Translation;
+}
 
-const Projects = () => {
+const Projects = ({ translation }: ProjectsProps) => {
   return (
     <div>
-      <h1 className="text-3xl font-semibold my-8">Lorem ipsum</h1>
-      <div className="flex items-center gap-2 hover:cursor-pointer">
-        <h2 className="text-2xl font-extrabold">2025</h2>
-        <span className="flex w-full bg-black h-2 rounded-2xl"></span>
-        <FaCaretDown className="w-8 h-8" />
-      </div>
+      <h1 className="text-3xl font-extrabold my-8">
+        {translation.projects.heading}
+      </h1>
+      <Year year={2025} lang={translation.lang} />
+      <Year year={2024} lang={translation.lang} />
+      <Year year={2023} lang={translation.lang} />
     </div>
   );
 };

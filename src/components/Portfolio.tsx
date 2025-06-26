@@ -10,7 +10,7 @@ const Portfolio = ({ translation }: PortfolioProps) => {
   return (
     <main className="flex flex-col gap-12 mx-[12%]">
       <Hero texts={translation.hero} />
-      <Projects />
+      <Projects translation={translation} />
     </main>
   );
 };
