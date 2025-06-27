@@ -17,7 +17,7 @@ const Year = ({ year, lang }: YearProps) => {
   return (
     <div
       className={`flex flex-col gap-4 overflow-hidden transition-all duration-500 ${
-        isOpen ? "max-h-[2999px]" : "max-h-8"
+        isOpen ? "max-h-[5000px] lg:max-h-[2999px]" : "max-h-8"
       }`}
     >
       <div
@@ -30,9 +30,9 @@ const Year = ({ year, lang }: YearProps) => {
           {year}
         </h2>
         <span
-          className={`flex w-full transition-all bg-black ${
+          className={`flex w-full transition-all bg-[#4c4f69] ${
             isOpen && "bg-blue-500"
-          } h-2 rounded-2xl group-hover:bg-blue-500 `}
+          } h-1.5 rounded-2xl group-hover:bg-blue-500 `}
         ></span>
         <FaCaretDown
           className={`w-8 h-8 transition-all group-hover:text-blue-500  ${
@@ -51,9 +51,9 @@ const Year = ({ year, lang }: YearProps) => {
             return (
               <div
                 key={index}
-                className="flex flex-col xl:flex-row items-center my-24 gap-12 xl:my-8"
+                className="flex flex-col xl:flex-row items-center my-16 lg:my-24 gap-12 xl:my-8"
               >
-                <div className="w-full xl:w-2/5 min-h-64">
+                <div className="w-full xl:w-2/5 xl:min-h-64">
                   <Cards images={p.image} />
                 </div>
                 <div className="w-full xl:w-3/5">
@@ -66,7 +66,7 @@ const Year = ({ year, lang }: YearProps) => {
                       return (
                         <ul>
                           {t.items.map((i) => (
-                            <li className="list-disc marker:text-xl marker:text-blue-500 ">
+                            <li className="list-disc list-inside marker:text-xl marker:text-blue-500 ">
                               {i}
                             </li>
                           ))}

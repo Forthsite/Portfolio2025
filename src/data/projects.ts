@@ -14,7 +14,8 @@ export interface Project {
   descriptionEN?: Description[];
   tags: string[];
   year: number;
-  link: string;
+  link?: string;
+  repo?: string;
   company: string;
 }
 
@@ -45,7 +46,7 @@ export const projects: Project[] = [
           "Grafický návrh a skript pro generování prezentačních PDF karet pro jednotlivé byty",
           "Backend postavený na Node.js + Nginx, s bezpečnou komunikací a trvalým ukládáním dat",
           "Integrace Realpad API pro pravidelné načítání ceníku a detailů jednotek",
-          "Caching dat z Realpad CRM do MongoDB pro rychlé načítání a minimalizaci zátěže API, dle doporučení dokumentace API",
+          "Caching dat z Realpad CRM do MongoDB pro rychlé načítání a minimalizaci zátěže API, dle Realpad dokumentace",
           "Napojení kontaktního formuláře na Realpad CRM s plným logováním a CAPTCHA integrací (Cloudflare turnstile)",
         ],
       },
@@ -88,10 +89,12 @@ export const projects: Project[] = [
       "React",
       "Node.js",
       "TailwindCSS",
-      "TypeScript",
+      "JavaScript",
       "Nginx",
       "API",
       "CRM",
+      "MongoDB",
+      "Github Actions",
     ],
     year: 2025,
     link: "",

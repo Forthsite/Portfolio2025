@@ -7,7 +7,7 @@ interface ProjectsProps {
 const Projects = ({ translation }: ProjectsProps) => {
   return (
     <div>
-      <h1 className="text-3xl font-extrabold my-8">
+      <h1 id="projects" className="text-3xl font-extrabold my-8">
         {translation.projects.heading}
       </h1>
       <Year year={2025} lang={translation.lang} />
